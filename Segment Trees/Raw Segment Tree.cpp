@@ -70,26 +70,3 @@ void update(int l, int r, int val, int v = 1, int tl = 1, int tr = N-1){
     update(l, r, val, v*2, tl, tm);
     update(l, r, val, v*2+1, tm+1, tr);
 }
-
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    int n; cin >> n;
-    fou(i,1,n){
-        cin >> a[i];
-    }
-
-    build();
-
-    int m; cin >> m;
-    while(m--){
-        int t, l, r; cin >> t >> l >> r;
-        if(t == 2){
-            int val; cin >> val;
-            update(l,r,val);
-        }
-        else{
-            cout << query(l,r) << endl;
-        }
-    }
-}
